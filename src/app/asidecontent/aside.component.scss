@@ -1,0 +1,41 @@
+mat-sidenav-container{
+    line-height: 2em;
+   
+    height: 100vh;
+
+}
+body{
+
+    font-family: "Times New Roman", Times, serif;
+
+
+}
+mat-sidenav{
+color:white;
+background-color:#5464bf;
+width: 200px;
+
+}
+
+mat-sidenav, mat-sidenav-content{
+
+    padding: 16px;
+
+}
+mat-sidenav-content{
+    
+    color:green;
+  
+     
+ 
+}
+.img-circle {
+    border-radius: 50%;
+}
+a:hover{
+cursor: pointer;
+}
+li{
+
+    cursor: pointer;
+}

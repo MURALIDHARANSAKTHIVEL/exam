@@ -1,0 +1,95 @@
+<html>
+
+<body >
+  <mat-toolbar style="background-color: #fcba03;   font-family: 'Times New Roman', Times, serif; ">
+    <mat-toolbar-row>
+
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="aside.toggle()" color="warn">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+
+      <h1 class="m-auto">NEXTSPHERE ONLINE TEST PORTAL </h1>
+      <!-- <p class="ml-auto">admin@nextphere.com</p > -->
+      <button class="ml-auto" mat-raised-button [matMenuTriggerFor]="usermenu">venki@nextphere.com</button>
+      <mat-menu #usermenu="matMenu">
+        <button mat-menu-item>Profile</button>
+        <button mat-menu-item>Help&support</button>
+        <button mat-menu-item>feedback</button>
+        <button mat-menu-item>Logout</button>
+
+      </mat-menu>
+
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-sidenav-container id="side_container" >
+    <mat-sidenav id="side_nav" mode="side" #aside opened>
+      <div class="profileimage">
+        <img  class="img-circle" src="assets/image/venkiverithanam.png" style="width:75px; height: 75px;" />
+        <h1>Venkki</h1>
+        <hr color="white">
+      </div>
+
+      <div  style="cursor: pointer;">
+        <a  data-toggle="collapse"   data-target="#createQuestion"  ><mat-icon>folder</mat-icon>  CreateQuestion</a>
+        <ul  id="createQuestion" class="collapse  text-left" style="list-style-type:none;" >
+          <li routerLink="fileupload">FileUpload</li>
+          <li routerLink="makeQuest">ManualCreate</li>
+        </ul>
+<br>
+      </div>
+      <div style="cursor: pointer;">
+       <a class="indicator-button" data-toggle="collapse"   data-target="#createUser"  ><mat-icon>create</mat-icon>  CreateUsers</a>
+       <ul  id="createUser" class="collapse  text-left" style="list-style-type:none;" >
+         <li routerLink="makeuser">MakeUsers</li>
+         <li routerLink="manageuser">ManageUsers</li>
+       </ul>
+      </div>
+      <div style="cursor: pointer;">
+        <a class="indicator-button" data-toggle="collapse"   data-target="#createTest"  ><mat-icon>create</mat-icon>  createTest</a>
+        <ul  id="createTest" class="collapse  text-left" style="list-style-type:none;" >
+          <li routerLink="maketest">MakeTest</li>
+          <li routerLink="testsetting">TestSetting</li>
+        </ul>
+       </div>
+
+       <div style="cursor: pointer;">
+        <a class="indicator-button" data-toggle="collapse"   data-target="#report"  ><mat-icon>explore</mat-icon>  TestReport</a>
+        <ul  id="report" class="collapse  text-left" style="list-style-type:none;" >
+         
+        </ul>
+       </div>
+<hr>
+<div style="cursor: pointer;">
+  <a class="indicator-button" data-toggle="collapse"   data-target="#report"  ><mat-icon>settings_applications</mat-icon>  ThemeSetting</a>
+  <ul  id="report" class="collapse  text-left" style="list-style-type:none;" >
+   
+  </ul>
+ </div>
+ <hr>
+ <div style="cursor: pointer;">
+  <a class="indicator-button" data-toggle="collapse"   data-target="#report"  ><span class="glyphicon glyphicon-log-out"> Logout</span></a>
+  <ul  id="report" class="collapse  text-left" style="list-style-type:none;" >
+   
+  </ul>
+ </div>
+    </mat-sidenav>
+
+
+
+    <mat-sidenav-content id="side_content" style="background-color: #DCDCDC;">
+
+
+   <div class="shadow-lg p-3 mb-5 bg-white rounded">
+      <router-outlet></router-outlet>
+   </div>
+           
+       
+
+
+    </mat-sidenav-content>
+    
+
+  </mat-sidenav-container>
+</body>
+
+</html>

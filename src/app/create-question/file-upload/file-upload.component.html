@@ -1,0 +1,73 @@
+<div class=" container">
+    <div class="row">
+        <div class="col-12">
+            <h1>CHOOSE QUESTION IMAGE FILE</h1>
+            <hr>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+
+
+        <div class="col-4">
+
+
+
+            <input type="file" (change)="questImage($event)" /><br><br>
+
+            <div [attr.class]="disableTemplateDiv">
+                <h3>CHOOSE TEMPLATE </h3>
+                <input type="radio" name="Typeoption" value="1" [formControl]="optionType"
+                    (ngModelChange)="optionCount()">
+                RadioButton
+                <input type="radio" name="Typeoption" value="2" [formControl]="optionType"
+                    (ngModelChange)="optionCount()">
+                Checkbox<br><br>
+                <h3>CHOOSE SECTION </h3>
+        <select>
+        <option  value="1">Technical</option>
+        <option  value="2">LogicalReasoning</option>
+        <option  value="3">VerbalReasoning</option>
+        <option  value="3">Others</option>
+      </select><br><br>
+
+                <h5>ENTER TOTAL CHOICE </h5>
+                <input type="number" placeholder="CHOICE IN IMAGE" [formControl]="optionValue"
+                    (ngModelChange)="optionCount($event)" />
+                <p style="color: red;">{{optionError}}</p>
+
+            </div>
+
+
+        </div>
+        <div class="col-6">
+            <div class="col-12" [hidden]="imagehidden">
+                <img class="img-fluid" [src]="img" style="width:auto; height: auto;">
+                <br>
+                <p style="color: red;">CHOOSE CORRECT ANSWER</p>
+            </div>
+            <div class="col-12">
+
+                <ul *ngFor="  let option of ansType; index as i " style="list-style-type:none;">
+                    <li *ngIf="ansTemplate == 2">
+                        <input type="checkbox" value="i"> {{option}}</li>
+                    <li *ngIf="ansTemplate == 1">
+                        <input type="radio" value="i"> {{option}}</li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="row">
+        <div class="col-12 text-center">
+            <button class="btn btn-primary " style="font-size: 15px;">SAVE</button>
+        </div>
+
+    </div>
+</div>
+
+<br>

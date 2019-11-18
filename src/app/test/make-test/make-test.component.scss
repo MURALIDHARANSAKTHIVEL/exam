@@ -1,0 +1,40 @@
+#filtermodel > h2{
+margin-right: 5px;
+}
+#filtermodel > select{
+
+    margin-right: auto;
+}
+.form-control{
+
+    font-size: 1.4rem;
+}
+
+
+a.page-link.phase-active {
+   
+    background-color: grey !important;
+    color: white;
+}
+
+button {
+    font-size: 1em;
+  }
+#pageinput {
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: blue
+  }
+ .pagination{
+
+margin-right: auto;
+
+ }
+ #pagelabel{
+
+margin-right: 1em;
+ }
+ #pagecount{
+
+    margin-right: 1em;
+ }
