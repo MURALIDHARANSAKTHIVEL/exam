@@ -16,3 +16,22 @@
     width:15%;
     display: inline-block;
 }
+#ngbDatepicker{
+
+font-size: 4em;
+}
+
+#dategroup >label {
+
+    width:15%;
+    justify-content: unset;
+
+}
+
+div#timegroup {
+    display: flex;
+}
+
+div#timegroup > label {
+    width: 15%;
+}

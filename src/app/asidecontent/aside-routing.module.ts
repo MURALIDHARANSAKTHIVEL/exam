@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AsideComponent } from './aside.component';
-import { FileUploadComponent } from '../create-question/file-upload/file-upload.component';
+
 
 
 const routes: Routes = [
@@ -11,7 +11,8 @@ const routes: Routes = [
     children:[
     {path:'',loadChildren:() => import('../create-question/create-question.module').then(m => m.CreateQuestionModule)},
     {path:'',loadChildren:()=> import('../user/user.module').then(m => m.UserModule) },
-    {path:'',loadChildren:()=> import('../test/test.module').then(m => m.TestModule) }
+    {path:'',loadChildren:()=> import('../test/test.module').then(m => m.TestModule) },
+    {path:'',loadChildren:()=> import('../report/report.module').then(m => m.ReportModule)}
   ]
   },
  
