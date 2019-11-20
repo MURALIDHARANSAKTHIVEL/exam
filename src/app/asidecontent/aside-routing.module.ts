@@ -5,6 +5,7 @@ import { AsideComponent } from './aside.component';
 
 
 const routes: Routes = [
+  
 
     {path:'',component:AsideComponent,
   
