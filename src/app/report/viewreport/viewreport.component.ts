@@ -1,17 +1,22 @@
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import * as jsPDF from 'jspdf';
 @Component({
-  selector: 'app-collection-report',
-  templateUrl: './collection-report.component.html',
-  styleUrls: ['./collection-report.component.scss']
+  selector: 'app-viewreport',
+  templateUrl: './viewreport.component.html',
+  styleUrls: ['./viewreport.component.scss']
 })
-export class CollectionReportComponent implements OnInit {
+export class ViewreportComponent implements OnInit {
 
   constructor() { }
-
+  Customreport=true;
   ngOnInit() {
   }
-  @ViewChild('tabledata',{static:false}) tabledata:ElementRef;
+@ViewChild('tabledata',{static:false}) tabledata:ElementRef;
+
+  Customreportdisable()
+  {
+    this.Customreport =!this.Customreport;
+  }
 
   download()
   {
@@ -32,6 +37,5 @@ document.fromHTML(tabledata.innerHTML,10,10,{
 });
 document.save('fresher_2019.pdf');
   }
-
-
+  
 }

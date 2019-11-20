@@ -1,1 +1,85 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h3>ReportCollection</h3>
+      <hr>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-12 ">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Sno</th>
+            <th>Conducted Date</th>
+            <th>Test Name</th>
+            <th>Passed</th>
+            <th>Result</th>
+            <th>ExportPdf</th>
+
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>19-11-2019</td>
+            <td>Fresher_2019Batch</td>
+            <td>20</td>
+            <td>
+              <li style="list-style-type:none;  cursor: pointer;  text-decoration: underline; color: red;"
+                routerLink="../reportCollection/viewreport">viewreport</li>
+            </td>
+            <td style="text-decoration: underline; cursor: pointer; color:blue" (click)="download()">download</td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+
+      
+      <div class="col-md-6" #tabledata style="display: none;">
+
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Sno</th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Number</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th>3</th>
+              <td>Larry</td>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+</div>
+
 

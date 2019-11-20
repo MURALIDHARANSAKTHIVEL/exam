@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 ">
+            <h3>Fresher_2019 report</h3>
+            <div class="col-12 text-right ">
+                <input type="checkbox" class="btn btn-outline-secondary mr-2" (click)="Customreportdisable()"
+                    placement="top" ngbTooltip="Custom Report" />
+                <input type="text" [disabled]="Customreport" placeholder="Enter cuttoff mark!!" />
+                <button class="btn btn-info" [disabled]="Customreport" style="color: red;" (click)="download()">DOWNLOAD PDF</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Attended</th>
+                        <th>clear</th>
+                        <th>cuttoff</th>
+                        <th>Totalmark</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>100</td>
+                        <td>50</td>
+                        <td>35</td>
+                        <td>100</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+        <div class="col-md-6" #tabledata>
+
+                <table class="table table-striped" >
+                        <thead>
+                          <tr>
+                            <th scope="col">Sno</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Number</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th >1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th>2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <th >3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+        </div>
+
+    </div>
+
+</div>

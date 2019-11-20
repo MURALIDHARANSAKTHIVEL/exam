@@ -1,7 +1,7 @@
 <div   class=" container">
     <div class="row">
         <div class="col-12">
-                <h1>Create Question</h1><hr>
+                <h3>Create Question</h3><hr>
             </div>
 
           
@@ -10,12 +10,12 @@
     <div class="row">
            
         <div class="col-5">
-            <h4>Mention the Question below ...</h4>
+            <h5>Mention the Question below ...</h5>
             <textarea type="text" style="width:100%; height:200px;" [formControl]="question"></textarea>
 
 
             <br>
-            <h3>CHOOSE TEMPLATE </h3>
+            <h5>CHOOSE TEMPLATE </h5>
             <input type="radio" name="Typeoption" value="1" [formControl]="optionType"
                 (ngModelChange)="optionCount($event)">
             RadioButton
@@ -23,21 +23,21 @@
                 (ngModelChange)="optionCount($event)">
             Checkbox<br><br>
 
-            <h3>CHOOSE SECTION </h3>
+            <h5>CHOOSE SECTION </h5>
             <select>
             <option  value="1">Technical</option>
             <option  value="2">LogicalReasoning</option>
             <option  value="3">VerbalReasoning</option>
             <option  value="3">Others</option>
           </select><br><br> 
-            <h3>ENTER TOTAL CHOICE </h3>
+            <h5>ENTER TOTAL CHOICE </h5>
             <input type="number" placeholder="TOTAL OPTION" [formControl]="optionValue"
                 (ngModelChange)="optionCount($event)" />
                 <p style="color: red;">{{optionError}}</p>
 
         </div>
         <div class="col-7">
-            <h3>Mention answer below</h3><br>
+            <h5>Mention answer below</h5><br>
             <ul *ngFor="  let option of ansType; index as i " style="list-style-type:none;">
                 <li *ngIf="ansTemplate == 2">
                     <input type="checkbox" value="i">&nbsp;&nbsp;<input type="text" /></li>
@@ -51,7 +51,7 @@
 
     <div class="row">
             <div class="col-12 text-center">
-                <button class="btn btn-primary " style="font-size: 15px;">SAVE</button>
+                <button class="btn btn-primary " >SAVE</button>
             </div>
     
         </div>
