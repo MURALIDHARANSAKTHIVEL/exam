@@ -11,26 +11,24 @@ export class CollectionReportComponent implements OnInit {
 
   ngOnInit() {
   }
-  @ViewChild('tabledata',{static:false}) tabledata:ElementRef;
+  @ViewChild('tabledata', { static: false }) tabledata: ElementRef;
 
-  download()
-  {
-let document=new jsPDF();
-let Handler={
-  '#editor':function(element,rendered)
-  {
-    return true;
-  }
-};
-console.log(this.tabledata.nativeElement);
-let tabledata=this.tabledata.nativeElement;
-document.fromHTML(tabledata.innerHTML,10,10,{
+  download() {
+    let document = new jsPDF();
+    let Handler = {
+      '#editor': function (element, rendered) {
+        return true;
+      }
+    };
+    console.log(this.tabledata.nativeElement);
+    let tabledata = this.tabledata.nativeElement;
+    document.fromHTML(tabledata.innerHTML, 10, 10, {
 
-'width':500,
-'elementHandlers':Handler
 
-});
-document.save('fresher_2019.pdf');
+      'elementHandlers': Handler
+
+    });
+    document.save('fresher_2019.pdf');
   }
 
 
