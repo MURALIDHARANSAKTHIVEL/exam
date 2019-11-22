@@ -18,7 +18,6 @@ export class ThemeSettingComponent implements OnInit {
   
   font(classname)
   {
-this.fontclass=classname;
 this.aside.bodyfont=classname;
   }
 
