@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row">
+
+        <div class="col-12">
+            <h3>ThemeSettings</h3>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+
+            <h3 [attr.class]="fontclass">Font-Style</h3>
+            <hr>
+            <button mat-raised-button (click)="font('serif')">Font1</button>
+            <button mat-raised-button (click)="font('sans-serif')">Font2</button>
+            <button mat-raised-button (click)="font('monospace')">Font3</button>
+            <button mat-raised-button (click)="font('cursive')">Font4</button>
+            <button mat-raised-button (click)="font('fantasy')">Font5</button>
+            <button mat-raised-button (click)="font('DefaultBody')">none</button>
+            
+            <!-- <input type="radio" name="font" value="serif" (click)=font($event.target.value) /> serif <br>	
+            <input type="radio"  name="font" value="sans-serif" (click)=font($event.target.value) /> sans-serif <br>
+            <input type="radio"  name="font" value="monospace" (click)=font($event.target.value) /> monospace<br>
+            <input type="radio"  name="font" value="cursive" (click)=font($event.target.value) /> cursive	<br>
+            <input type="radio"  name="font" value="fantasy" (click)=font($event.target.value) /> fantasy <br>
+            <input type="radio"   name="font" value="none" (click)=font($event.target.value) /> none <br> -->
+
+        </div>
+<div class="col-12">
+        <br>
+    <h3>SideNabar</h3>
+    <hr>
+    <button mat-fab (click)="sidenavTheme('sidenavstyle1')">Theme1</button>
+    <button mat-fab (click)="sidenavTheme('sidenavstyle2')">Theme2</button>
+    <button mat-fab (click)="sidenavTheme('sidenavstyle3')">Theme3</button>
+    <button mat-fab (click)="sidenavTheme('sidenavstyle4')">Theme4</button>
+    <button mat-fab (click)="sidenavTheme('sidenavstyle5')">Theme5</button>
+    <button mat-fab (click)="sidenavTheme('sidenavstyle6')">Theme6</button>
+    <button mat-fab (click)="sidenavTheme('Defaultsidenav')">None</button>
+</div>
+    </div>
+    <div class="col-12">
+        <br>
+        <h3>ToolBar</h3>
+<hr>
+
+
+    </div>
+
+</div>

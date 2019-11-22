@@ -10,7 +10,8 @@ const routes: Routes = [
     {path:'',loadChildren:() => import('../create-question/create-question.module').then(m => m.CreateQuestionModule)},
     {path:'',loadChildren:()=> import('../user/user.module').then(m => m.UserModule) },
     {path:'',loadChildren:()=> import('../test/test.module').then(m => m.TestModule) },
-    {path:'',loadChildren:()=> import('../report/report.module').then(m => m.ReportModule)}
+    {path:'',loadChildren:()=> import('../report/report.module').then(m => m.ReportModule)},
+    {path:'',loadChildren:()=> import('../theme-setting/theme-setting.module').then(m => m.ThemeSettingModule)}
   ]
   },
  

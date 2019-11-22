@@ -5,29 +5,101 @@ mat-sidenav-container{
     width: 100%;
 
 }
-body{
+#DefaultBody{
 
     font-family: "Times New Roman", Times, serif;
 
 
 }
-mat-sidenav{
+
+#serif{
+
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+#sans-serif{
+
+    font-family:Georgia, serif;
+}
+#monospace{
+
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+#cursive{
+
+    font-family:"Comic Sans MS", cursive, sans-serif;
+}
+#fantasy{
+
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+
+
+
+#Defaultsidenav{
 color:white;
 background-color:#5464bf;
 width: 200px;
 
 }
 
+#sidenavstyle1{
+
+    background-color:#79c753;
+    
+    color: black ;
+    width: 200px;
+}
+#sidenavstyle2{
+
+    background-color:#2e4a62;
+    
+    color: white ;
+    width: 200px;
+}
+#sidenavstyle3{
+
+    background-color:#00a591;
+    
+    color: white ;
+    width: 200px;
+}
+#sidenavstyle4{
+
+    background-color:#e94b3c;
+    
+    color: white ;
+    width: 200px;
+}
+#sidenavstyle5{
+
+    background-color:#4c6a92;
+    
+    color: white ;
+    width: 200px;
+}
+
+
+#sidenavstyle6{
+
+    background-color:#bd3d3a;
+    
+    color: white ;
+    width: 200px;
+}
+
+
 mat-sidenav, mat-sidenav-content{
 
     padding: 16px;
 
 }
-mat-sidenav-content{
+#Defaultcontent{
     
     color:green;
+    background-color: #DCDCDC;
   
-     
  
 }
 .img-circle {

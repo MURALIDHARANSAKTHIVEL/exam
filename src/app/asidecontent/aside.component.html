@@ -1,6 +1,6 @@
 <html>
 
-<body >
+<body  [attr.id]="bodyfont">
   <mat-toolbar style="background-color: #fcba03;   font-family: 'Times New Roman', Times, serif; ">
     <mat-toolbar-row>
 
@@ -21,8 +21,8 @@
 
     </mat-toolbar-row>
   </mat-toolbar>
-  <mat-sidenav-container id="side_container" >
-    <mat-sidenav id="side_nav" mode="side" #aside opened>
+  <mat-sidenav-container  id="side_container" >
+    <mat-sidenav  [attr.id]="Idsidenav"  id="side_nav" mode="side" #aside opened>
       <div class="profileimage">
         <img  class="img-circle" src="assets/image/venkiverithanam.png" style="width:75px; height: 75px;" />
         <h1>Venkki</h1>
@@ -60,10 +60,11 @@
        </div>
 <hr>
 <div style="cursor: pointer;">
-  <a class="indicator-button" data-toggle="collapse"   data-target="#report"  ><mat-icon>settings_applications</mat-icon>  ThemeSetting</a>
-  <ul  id="report" class="collapse  text-left" style="list-style-type:none;" >
-   
-  </ul>
+  <!-- <a class="indicator-button" data-toggle="collapse"   data-target="#report"  ><mat-icon>settings_applications</mat-icon>  ThemeSetting</a>
+  <ul  id="report" class="collapse  text-left" style="list-style-type:none;" > -->
+      <li routerLink="themesettings" style="list-style-type:none;" ><mat-icon>settings_applications</mat-icon>  ThemeSetting</li>
+  
+  <!-- </ul> -->
  </div>
  <hr>
  <div style="cursor: pointer;">
@@ -76,11 +77,16 @@
 
 
 
-    <mat-sidenav-content id="side_content" style="background-color: #DCDCDC;">
+    <mat-sidenav-content [attr.id]="Idsidecontent"  >
 
 
    <div class="shadow-lg p-3 mb-5 bg-white rounded">
+
+
       <router-outlet></router-outlet>
+
+
+
    </div>
            
        

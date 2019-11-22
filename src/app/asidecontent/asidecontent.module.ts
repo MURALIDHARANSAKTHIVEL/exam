@@ -22,6 +22,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatBadgeModule} from '@angular/material/badge';
 
 
+
 const material = [
   MatButtonModule,
   MatButtonToggleModule,
@@ -49,6 +50,7 @@ const material = [
   
  
   ],
-  exports:[material]
+  exports:[material],
+  providers:[]
 })
 export class AsidecontentModule { }
