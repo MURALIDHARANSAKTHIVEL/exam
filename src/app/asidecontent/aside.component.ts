@@ -14,13 +14,14 @@ export class AsideComponent implements OnInit {
   constructor() { }
   Idsidecontent;
   Idsidenav;
-  bodyfont;
+  Idbodyfont;
+  IdToolbar;
   ngOnInit() {
 
     this.Idsidecontent="Defaultcontent";
     this.Idsidenav='Defaultsidenav';
-    this.bodyfont='DefaultBody';
-    
+    this.Idbodyfont='DefaultBody';
+   this.IdToolbar ='DefaultToolbar';
     
   }
   toggle()

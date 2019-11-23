@@ -4,9 +4,8 @@ import { AsideComponent } from './asidecontent/aside.component';
 
 
 const routes: Routes = [
-{path:'',redirectTo:'aside',pathMatch:'full'},
-{path:'aside',loadChildren:()=> import('./asidecontent/asidecontent.module').then(m => m.AsidecontentModule)}
-
+{path:'',redirectTo:'login',pathMatch:'full'},
+{path:'login',loadChildren:()=> import('./login-module/login-module.module').then(m => m.LoginModuleModule)}
 ];
 
 @NgModule({

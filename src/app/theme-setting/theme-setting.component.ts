@@ -18,7 +18,7 @@ export class ThemeSettingComponent implements OnInit {
   
   font(classname)
   {
-this.aside.bodyfont=classname;
+this.aside.Idbodyfont=classname;
   }
 
   sidenavTheme(theme)
@@ -26,7 +26,10 @@ this.aside.bodyfont=classname;
 this.aside.Idsidenav=theme;
   }
 
-  
+  Toolbartheme(theme)
+  {
+    this.aside.IdToolbar=theme;
+  }
 }
 
 

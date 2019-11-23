@@ -1,13 +1,12 @@
 <html>
 
-<body  [attr.id]="bodyfont">
-  <mat-toolbar style="background-color: #fcba03;   font-family: 'Times New Roman', Times, serif; ">
+<body  [attr.id]="Idbodyfont">
+  <mat-toolbar [attr.id]="IdToolbar">
     <mat-toolbar-row>
 
-      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="aside.toggle()" color="warn">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="aside.toggle()" id="iconbutton" >
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-
       <h1 class="m-auto">NEXTSPHERE ONLINE TEST PORTAL </h1>
       <!-- <p class="ml-auto">admin@nextphere.com</p > -->
       <button class="ml-auto" mat-raised-button [matMenuTriggerFor]="usermenu">venki@nextphere.com</button>
@@ -35,7 +34,7 @@
           <li routerLink="fileupload">FileUpload</li>
           <li routerLink="makeQuest">ManualCreate</li>
         </ul>
-<br>
+<br>      
       </div>
       <div style="cursor: pointer;">
        <a class="indicator-button" data-toggle="collapse"   data-target="#createUser"  ><mat-icon>create</mat-icon>  CreateUsers</a>

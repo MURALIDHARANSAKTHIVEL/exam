@@ -13,7 +13,7 @@ const routes: Routes = [
     {path:'',loadChildren:()=> import('../report/report.module').then(m => m.ReportModule)},
     {path:'',loadChildren:()=> import('../theme-setting/theme-setting.module').then(m => m.ThemeSettingModule)}
   ]
-  },
+  },  
  
   
 ];
