@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import 'hammerjs';
-import { FileUploadComponent } from '../create-question/file-upload/file-upload.component';
-import { ThemeSettingComponent } from '../theme-setting/theme-setting.component';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-aside',
   templateUrl: './aside.component.html',
@@ -11,18 +10,19 @@ export class AsideComponent implements OnInit {
 
 
   opened=false;
-  constructor() { }
+  constructor(private router :Router) { }
   Idsidecontent;
   Idsidenav;
   Idbodyfont;
   IdToolbar;
   ngOnInit() {
-
     this.Idsidecontent="Defaultcontent";
     this.Idsidenav='Defaultsidenav';
     this.Idbodyfont='DefaultBody';
    this.IdToolbar ='DefaultToolbar';
+   this.router.navigate(['login/aside/dashBoard']);
     
+   
   }
   toggle()
   {

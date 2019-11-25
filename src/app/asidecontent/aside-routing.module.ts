@@ -7,6 +7,7 @@ import { AsideComponent } from './aside.component';
 const routes: Routes = [
     {path:'',component:AsideComponent,
     children:[
+    {path:'',loadChildren:()=>import('../dhash-board/dhash-board.module').then(m => m.DhashBoardModule)},
     {path:'',loadChildren:() => import('../create-question/create-question.module').then(m => m.CreateQuestionModule)},
     {path:'',loadChildren:()=> import('../user/user.module').then(m => m.UserModule) },
     {path:'',loadChildren:()=> import('../test/test.module').then(m => m.TestModule) },

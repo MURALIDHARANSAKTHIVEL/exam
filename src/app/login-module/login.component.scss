@@ -1,9 +1,21 @@
-#loginpage{
-    background-image: url('D:/student_NFB18Backup_Muraliii/Angular/Exam/src/assets/image/Loginpage.jpg');
+.loginpage{
+
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-origin: inherit;
     color: white;
  
+}
+.container,.row{
+
+    height: 100vh;
+
+}
+.formdiv {
+    padding: 0em 3em;
+   
+}
+input{
+   margin-bottom: 1em;
 }

@@ -1,94 +1,97 @@
 <div class="container">
 
-    <div class="row">
-        <div class="col-12" >
-            <h2 >Test-Setting</h2>
-            <span><button type="button" class="btn btn-primary">Save</button></span>
-            <hr>
-        </div>
+  <div class="row">
+    <div class="col-12">
+      <h2>Test-Setting</h2>
+      <span><button type="button" class="btn btn-primary">Save</button></span>
+      <hr>
     </div>
-<div class="row">
-<div class="col-12" id="testsetting">
-           <h3>Question-settings</h3> 
-<hr>   <div>
+  </div>
+  <div class="row">
+    <div class="col-12" id="testsetting">
+      <h3>Question-settings</h3>
+      <hr>
+      <div>
         <label>Question Model</label>
         <select>
-        <option *ngFor="let value of qpaper" value="value" >{{value}}</option>
+          <option *ngFor="let value of qpaper" value="value">{{value}}</option>
         </select>
-    </div>
-<div>
-        <label>TotalMark</label>
-        <input type="text"/></div>
-        <div>
-        <label>Cut-Off</label>
-        <input type="text"/>
-    </div>
-    <div>
-            <label>Negative Marks</label>
-            <input type="text"/>
-    </div>
-        
-</div>
-</div>
-
-<div class="row">
-    <div class="col-12">
-    <h3>Date & Time Settings</h3>
-   <hr>
-   <div id="dategroup" class="form-inline" style="justify-content: unset;">
-   <label>Test-Date</label>  
-    <div class="input-group">
-        
-        <input  placeholder="yyyy-mm-dd"
-               name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
-        </div>
-        
       </div>
+      <div>
+        <label>Mark per Question</label>
+        <input type="text" />
+      </div>
+      <div>
+
+        <label>TotalMark</label>
+        <input type="text" /></div>
+      <div>
+        <label>Cut-Off</label>
+        <input type="text" />
+      </div>
+      <div>
+        <label>Negative Marks</label>
+        <input type="text" />
+      </div>
+
     </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <h3>Date & Time Settings</h3>
+      <hr>
+      <div id="dategroup" class="form-inline" style="justify-content: unset;">
+        <label>Test-Date</label>
+        <div class="input-group">
+
+          <input placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+          </div>
+
+        </div>
+      </div>
       <br>
       <div id="timegroup">
-            <label>Test-Time</label>
-            <div id="timepicker">
-                    <ngb-timepicker [(ngModel)]="time" ></ngb-timepicker>
+        <label>Test-Time</label>
+        <div id="timepicker">
+          <ngb-timepicker [(ngModel)]="time"></ngb-timepicker>
 
-            </div>
-         
-           
+        </div>
+
+
       </div>
-     
+
 
 
       <!-- <ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next"></ngb-datepicker> -->
-         <!-- <div class="input-group">
+      <!-- <div class="input-group">
             <angular2-date-picker #datetime [(ngModel)]="date1" [settings]="setting"></angular2-date-picker>
             <div class="input-group-append">
                 <button class="btn btn-outline-secondary calendar" (click)="toggle(datetime)" type="button"></button>
               </div>
          </div>     -->
-     
+
     </div>
-    
-</div>
 
-<br>
-<div class="row" id="generalsetting">
-<div class="col-12">
-   <h3>General Settings</h3>
-   <hr>
-   <div class="form-inline" >
-   <label style="width: 15%; justify-content: unset;">Test-Link</label>
-      <span style="color:red">http://localhost:8080/NextsphereOnlineTest/</span>
-   <input type="text"/>
-</div><br>
-<label style="vertical-align: top;">Test Instruction</label>
-<textarea style="width: 400px; height: 200px;" ></textarea>
-</div>
+  </div>
 
-</div>
+  <br>
+  <div class="row" id="generalsetting">
+    <div class="col-12">
+      <h3>General Settings</h3>
+      <hr>
+      <div class="form-inline">
+        <label style="width: 15%; justify-content: unset;">Test-Link</label>
+        <span style="color:red">http://localhost:8080/NextsphereOnlineTest/</span>
+        <input type="text" />
+      </div><br>
+      <label style="vertical-align: top;">Test Instruction</label>
+      <textarea style="width: 400px; height: 200px;"></textarea>
+    </div>
 
-
+  </div>
 
 
 
@@ -97,7 +100,9 @@
 
 
 
-<!-- <div class="row">
+
+
+  <!-- <div class="row">
     <div class="col-12">
 
 

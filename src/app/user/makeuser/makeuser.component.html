@@ -9,33 +9,33 @@
     <div class="row" id="formrow">
         <div class="col-6 ">
 
-            <form>
+            <form [formGroup]="Makeuser">
 
-                <div class="form-group">
+                <div class="form-group" >
                     <label>Name</label>
 
-                    <input type="text"  placeholder="firstName"  size="7" />&nbsp;&nbsp;
-                    <input type="text" placeholder="LastName" size="5" />
+                    <input type="text"  placeholder="firstName"  size="7"  formControlName="firstname" />&nbsp;&nbsp;
+                    <input type="text" placeholder="LastName" size="5" formControlName="lastname" />
                 </div>
                 <div class="form-group">
 
                     <label>Emp_Id</label>
-                    <input type="text" placeholder="EmployeeId" />
+                    <input type="text" placeholder="EmployeeId" formControlName="EmployeeId" />
                 </div>
                 <div class="form-group">
 
                     <label>Password</label>
-                    <input type="password" placeholder="password" />
+                    <input type="password" placeholder="password" formControlName="password" />
                 </div>
                 <div class="form-group">
 
                     <label>E-mail</label>
-                    <input type="email" placeholder="E-mail" />
+                    <input type="email" placeholder="E-mail" formControlName="Email" />
                 </div>
                 <div class="form-group">
     
                     <label>Phone</label>
-                    <input type="number" placeholder="MobileNumber" />
+                    <input type="number" placeholder="MobileNumber"  formControlName="mobilenumber" />
                 </div>
 
 
@@ -47,24 +47,28 @@
         </div>
         <div class="col-6">
            
-            
+            <form [formGroup]="Makeuser">
 
             <div class="form-group">
 
                 <label>Role</label>
-                <input type="radio" name="role" value="1" />Admin &nbsp;&nbsp;
-                <input type="radio" name="role" value="2" /> TestConductor
+                <input type="radio" name="role" value="1" formControlName="role" />Admin &nbsp;&nbsp;
+                <input type="radio" name="role" value="2"   formControlName="role"  /> TestConductor
             </div>
-            <div class="form-group">
+            <div class="form-group"  >
                 <label>access</label>
-                <input type="checkbox" name="permission"/> MakeAdmin <br>
-                <label></label>   <input type="checkbox" name="permission"/> ManageAdmin<br>
-                <label></label>  <input type="checkbox" name="permission"/> MakeTestconductor<br>
-                <label></label>  <input type="checkbox" name="permission"/> ManageTestconductor<br>
-                <label></label>  <input type="checkbox" name="permission"/> CreateQuestion<br>
-                <label></label>  <input type="checkbox" name="permission"/> TestReport<br>
-                <!-- <label></label>  <input type="checkbox" name="permission"/> ThemeSetting<br>  -->
+                <div *ngFor=" let p of per; index as i  ">
+                    <input type="checkbox"  value={{p}}  (click)="permission($event)" />{{data[p]}}
+                </div>
+                <!-- <input type="checkbox" formControlName="access"  value="1" name="permission" (ngModelChange)="permission( data.value)"/> MakeAdmin <br>
+                <label></label>   <input type="checkbox" formControlName="access" value="2" name="permission"/> ManageAdmin<br>
+                <label></label>  <input type="checkbox" formControlName="access"  value="3" name="permission"/> MakeTestconductor<br>
+                <label></label>  <input type="checkbox" formControlName="access" value="4"  name="permission"/> ManageTestconductor<br>
+                <label></label>  <input type="checkbox" formControlName="access"  value="5" name="permission"/> CreateQuestion<br>
+                <label></label>  <input type="checkbox" formControlName="access" value="6"  name="permission"/> TestReport<br> -->
+                
             </div>
+        </form>
         </div>
        
         <div class="col-12">
@@ -74,6 +78,6 @@
 
         </div>
     </div>
-
+<p>{{Makeuser.value | json}}</p>
 
 </div>
