@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { UserserviceService } from 'src/app/AppService/userservice.service';
 
 @Component({
   selector: 'app-makeuser',
@@ -8,12 +9,12 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class MakeuserComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service : UserserviceService) { }
   info=[];
   info1=[];
   inf=[];
-per=[2,3,5,6];
-data=[,'MakeAdmin','ManageAdmin','MakeTestconductor','ManageTestconductor','CreateQuestion','TestReport']
+access :any= (this.service.userDetail.permission).split(',');
+userpermisson;
   ngOnInit() {
    
   }
@@ -25,7 +26,8 @@ data=[,'MakeAdmin','ManageAdmin','MakeTestconductor','ManageTestconductor','Crea
     Email:new FormControl(),
     mobilenumber:new FormControl(),
     role: new FormControl(),
-    access: new FormControl() 
+    access: new FormControl() ,
+    gender: new FormControl()
   });
   permission(value)
   {

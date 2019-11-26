@@ -49,6 +49,13 @@
            
             <form [formGroup]="Makeuser">
 
+
+                <div class="form-group">
+
+                    <label>Gender</label>
+                    <input type="radio" name="gender" value="1" formControlName="gender" />Male &nbsp;&nbsp;
+                    <input type="radio" name="gender" value="2"   formControlName="gender"  /> Female
+                </div>
             <div class="form-group">
 
                 <label>Role</label>
@@ -57,9 +64,10 @@
             </div>
             <div class="form-group"  >
                 <label>access</label>
-                <div *ngFor=" let p of per; index as i  ">
-                    <input type="checkbox"  value={{p}}  (click)="permission($event)" />{{data[p]}}
+                <div *ngFor=" let permission of access; index as i  ">
+                    <input type="checkbox"  value={{permission}}  (click)="permission($event)" />{{data[permission]}}
                 </div>
+
                 <!-- <input type="checkbox" formControlName="access"  value="1" name="permission" (ngModelChange)="permission( data.value)"/> MakeAdmin <br>
                 <label></label>   <input type="checkbox" formControlName="access" value="2" name="permission"/> ManageAdmin<br>
                 <label></label>  <input type="checkbox" formControlName="access"  value="3" name="permission"/> MakeTestconductor<br>

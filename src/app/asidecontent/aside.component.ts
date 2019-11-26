@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import 'hammerjs';
 import { Router } from '@angular/router';
+import { UserserviceService } from '../AppService/userservice.service';
 @Component({
   selector: 'app-aside',
   templateUrl: './aside.component.html',
@@ -10,7 +11,7 @@ export class AsideComponent implements OnInit {
 
 
   opened=false;
-  constructor(private router :Router) { }
+  constructor(private router :Router,private service : UserserviceService) { }
   Idsidecontent;
   Idsidenav;
   Idbodyfont;

@@ -9,10 +9,10 @@
                 <h2> Welcome To Online Test Portal</h2>
 
                 <div class="formdiv">
-                    <form style="display: block;">
-                        <input type="text" class="form-control" placeholder="username or E-mail" />
-                        <input type="password" class="form-control" placeholder="password" />
-                        <button type="button" class="btn  form-control text-center" style="background-color: green; color: #fff;" (click)="signup()" >SignIn</button>
+                    <form style="display: block;" [formGroup]="loginForm" (ngSubmit)="loginAction()">
+                        <input type="text" class="form-control" placeholder="Firstname or E-mail" formControlName="username" size="10" />
+                        <input type="password" class="form-control" placeholder="password" formControlName="password" size="10" />
+                        <button type="submit" class="btn  form-control text-center" style="background-color: green; color: #fff;"  >SignIn</button>
 
                     </form>
 

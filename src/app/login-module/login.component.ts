@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormGroup, FormControl } from '@angular/forms';
+import { UserserviceService } from '../AppService/userservice.service';
 
 @Component({
   selector: 'app-login',
@@ -8,13 +10,24 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private route:Router) { }
+  constructor(private route:Router,private service: UserserviceService) { }
 
   ngOnInit() {
   }
-  signup()
-  {
+  loginForm=new FormGroup({
+username:new FormControl(),
+password: new FormControl()
+  });
 
-this.route.navigate(['login/aside']);
+
+  loginAction()
+  {
+this.service.OwnerInformation(this.loginForm.value).subscribe(data=>{
+  this.service.userDetail=data;
+
+  console.log(data);
+  this.route.navigate(['login/aside']);
+})
+
   }
 }
