@@ -8,8 +8,14 @@ import { Observable } from 'rxjs';
 export class UserserviceService {
 
   constructor( private http:HttpClient) { }
+
+
+
+
+
+Allpermissions:Allpermission[]=[];
 userDetail:OwnerDetails;
-baseUrl="http://localhost:5001/api/exam";
+baseUrl="http://localhost:5001/api";
 
 public OwnerInformation(loginDetails:any):Observable<any>
 {
@@ -17,7 +23,17 @@ public OwnerInformation(loginDetails:any):Observable<any>
   return this.http.post(`${this.baseUrl}/users`,loginDetails);
 }
 
+public Globalpermission():Observable<any>
+{
 
+  return this.http.get(`${this.baseUrl}/permissons`);
+}
+
+public createUser(userDetails:OwnerDetails):Observable<any>
+{
+
+  return this.http.post(`${this.baseUrl}/new-users`,userDetails);
+}
 
 
 }

@@ -39,7 +39,7 @@
                         <td>{{i+1}}</td>
                         <td>{{user.name}}</td>
                         <td>{{user.user}}</td>
-                        <td><a  routerLink="../makeuser" [queryParams]="{ edit: i+1 }" style="color: green;">edit</a></td>
+                        <td><a  routerLink="../makeuser" [queryParams]="{ edit: i+1 }" style="color: green;" ngbTooltip="sdfsdg" >edit</a></td>
                         <td><a  style="color: red;"(click)="deleteDetails(deleteTemplate)" >Delete</a></td>
 
                     </tr>

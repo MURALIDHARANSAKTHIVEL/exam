@@ -1,16 +1,25 @@
 interface  OwnerDetails
 {
-    UserKey:Number;
-    Firstname:string;
-    Lastname:string;
-    Employee_Id:string;
-    Email:string;
-    MobileNumber:string;
-    roleKey:Number;
+    userkey:Number;
+    firstname:string;
+    lastname:string;
+    employee_Id:string;
+    email:string;
+    mobilenumber:string;
+    rolekey:Number;
     permission:string;
-    Genderkey:Number;
+    genderkey:Number;
     displaypicture:string;
-    CreatedBy:Number;
+    createdby:Number;
     password:string;
 
 }
+interface Allpermission{
+
+    pid:Number;
+    permissonkey:Number;
+    accessname:string;
+    roleaccesskey:Number;
+}
+
+
